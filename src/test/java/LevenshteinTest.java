@@ -29,4 +29,12 @@ public class LevenshteinTest {
         assertEquals(2, actualDistance1);
 
     }
+    @Test
+    public void testLevenshteinWithNull() {
+    	CharSequence lhs1 = null;
+    	CharSequence rhs1 = null;
+        int actualDistance1 = StringUtils.levenshteinDistance(lhs1, rhs1);
+        assertEquals(0, actualDistance1);
+
+    }
 }
